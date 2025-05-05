@@ -15,3 +15,5 @@ HexPool: eight-digit hex numbers, hex numbers w/ leading zeroes, hex numbers w/ 
 NegPool: number as a String, neg/pos (bug-triggering: leading char is "-")
 
 UnderscorePool: anything goes (bug-triggering: leading char is "_")
+
+Need to calculate the probability in the method initDefaultProbabilities() in ConstantPoolManager
