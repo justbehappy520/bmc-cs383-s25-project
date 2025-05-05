@@ -17,3 +17,7 @@ NegPool: number as a String, neg/pos (bug-triggering: leading char is "-")
 UnderscorePool: anything goes (bug-triggering: leading char is "_")
 
 Need to calculate the probability in the method initDefaultProbabilities() in ConstantPoolManager
+
+Need to make NAMEConstantVariableProbabilityPool for each new pool
+
+Consider checking out/adding tests to TestVariableConstantPool in client/src/test/java/org/evosuite/seeding
