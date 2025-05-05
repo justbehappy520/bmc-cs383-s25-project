@@ -21,3 +21,7 @@ Need to calculate the probability in the method initDefaultProbabilities() in Co
 Need to make NAMEConstantVariableProbabilityPool for each new pool
 
 Consider checking out/adding tests to TestVariableConstantPool in client/src/test/java/org/evosuite/seeding
+
+client/src/main/java/org/evosuite/testcase/TestFactory.java is where it all starts.. in the insertRandomStatement method.
+you can follow this to one of the lower level operations like the method createVariable. In attemptGeneration you will find methods to generate random variables. You are probably interested in the createPrimitive method. This calls:
+client/src/main/java/org/evosuite/testcase/statements/PrimitiveStatement.java where the getPrimitivestatement method creates primtives of the specified type. Look at the   randomize method in each one you want to modify. For example, client/src/main/java/org/evosuite/testcase/statements/numeric/IntPrimitiveStatement. The randomize method either (a) generates a totally random int or (b) selects from the constant pool. 
