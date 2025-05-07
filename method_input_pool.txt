@@ -1,0 +1,21 @@
+toInt(String): NegNumPool
+toInt(String, int): NegNumPool
+toLong(String): NegNumPool
+toLong(String, long): NegNumPool
+toFloat(String): NegNumPool
+toFloat(String, float): NegNumPool
+toDouble(String): NegNumPool
+toDouble(String, double): NegNumPool
+toShort(String): NegNumPool
+toShort(String, short): NegNumPool
+toByte(String): NegNumPool
+toByte(String, byte): NegNumPool
+createFloat(String): NegNumPool
+createDouble(String): NegNumPool
+createInteger(String): HexPool
+createLong(String): HexPool
+createBigInteger(String): HexPool
+createBigDecimal(String): NegNumPool
+createNumber(String): HexPool + NegNumPool
+isDigits(String): NegNumPool
+isNumber(String): HexPool + NegNumPool
