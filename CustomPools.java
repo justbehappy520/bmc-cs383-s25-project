@@ -1,3 +1,5 @@
+package org.evosuite.seeding;
+
 import java.util.Random;
 
 public class CustomPools {
@@ -8,23 +10,23 @@ public class CustomPools {
         String date = "";
         int digit;
         for (int i=0; i<4; i++) {
-            digit = random.nextInt(10);
+            digit = rand.nextInt(10);
             date += digit;
         }
         date += "-";
 
-        digit = random.nextInt(1);
+        digit = rand.nextInt(1);
         date += digit;
 
-        digit = random.nextInt(10);
+        digit = rand.nextInt(10);
         date += digit;
 
         date += "-";
 
-        digit = random.nextInt(1);
+        digit = rand.nextInt(1);
         date += digit;
 
-        digit = random.nextInt(10);
+        digit = rand.nextInt(10);
         date += digit;
 
         return date;
@@ -38,8 +40,10 @@ public class CustomPools {
     public static String randomUnicode() {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < length; i++) {
-            int codeUnit = random.nextInt(0x10000); 
+        int length = rand.nextInt(2) + 1;
+
+        for (int i = 0; i < 4; i++) {
+            int codeUnit = rand.nextInt(0x10000); 
             sb.append(String.format("\\u%04X", codeUnit));
         }
 
@@ -60,14 +64,13 @@ public class CustomPools {
     public static String randomLongDecimal() {
         String dec = "1.";
         for (int i=0; i<8; i++) {
-            int digit = random.nextInt(10);
+            int digit = rand.nextInt(10);
             dec += digit;
         }
         return dec;
     }
 
     public static String randomNegativeNumber() {
-        Random rand = new Random();
         boolean isDecimal = rand.nextBoolean();
     
         String result;

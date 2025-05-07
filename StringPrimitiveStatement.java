@@ -38,6 +38,7 @@ import org.evosuite.testcase.TestCase;
 import org.evosuite.testcase.execution.CodeUnderTestException;
 import org.evosuite.testcase.execution.Scope;
 import org.evosuite.utils.Randomness;
+import org.evosuite.seeding.CustomPools;
 
 /**
  * <p>
@@ -192,6 +193,8 @@ public class StringPrimitiveStatement extends PrimitiveStatement<String> {
 		List<String> lines = new ArrayList<>();
         Path path = Paths.get("in.txt"); // read in the input file
 
+		double p = Randomness.nextDouble();
+
         try { // handle exceptions
             lines = Files.readAllLines(path);
         } catch (IOException e) {
@@ -234,21 +237,21 @@ public class StringPrimitiveStatement extends PrimitiveStatement<String> {
 			int randString = 0;
             for (int i = 0; i < lines.size(); i++) {
                 line = lines.get(i);
-                String[] parts = str.split(": ");
+                String[] parts = line.split(": ");
                 String pool = parts[1];
-                if (pool.equals(DatePool)) {
+                if (pool.equals("DatePool")) {
                     date++;
-                } else if (pool.equals(HexPool)) {
+                } else if (pool.equals("HexPool")) {
                     hex++;
-                } else if (pool.equals(NegNumPool)) {
+                } else if (pool.equals("NegNumPool")) {
                     negative++;
-                } else if (pool.equals(UnicodePool)) {
+                } else if (pool.equals("UnicodePool")) {
                     unicode++;
-                } else if (pool.equals(DecimalPool)) {
+                } else if (pool.equals("DecimalPool")) {
                     decimal++;
-                } else if (pool.equals(UnderscorePool)) {
+                } else if (pool.equals("UnderscorePool")) {
 					underscore++;
-				} else if (pool.equals(StringPool)) {
+				} else if (pool.equals("StringPool")) {
 					randString++;
 				}
             }
@@ -269,7 +272,7 @@ public class StringPrimitiveStatement extends PrimitiveStatement<String> {
 			double decRange = underRange + probDec;
 
 			CustomPools customPool = new CustomPools();
-			double p = Randomness.nextDouble();
+			
 			if (p <= dateRange) {
 				value = customPool.randomDate();
 			} else if (p <= hexRange) {
