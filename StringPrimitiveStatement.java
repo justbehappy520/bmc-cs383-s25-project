@@ -191,14 +191,14 @@ public class StringPrimitiveStatement extends PrimitiveStatement<String> {
 	@Override
 	public void randomize() {
 		List<String> lines = new ArrayList<>();
-        Path path = Paths.get("in.txt"); // read in the input file
+        Path path = Paths.get("method_input_pool.txt"); // read in the input file
 
 		double p = Randomness.nextDouble();
 
         try { // handle exceptions
             lines = Files.readAllLines(path);
         } catch (IOException e) {
-            System.err.println("Error reading in.txt: " + e.getMessage());
+			logger.error("Error reading in.txt: " + e.getMessage());
             // fallback to constant pool or random string
             if (p >= Properties.PRIMITIVE_POOL) // generates a random string
                 value = Randomness.nextString(Randomness.nextInt(Properties.STRING_LENGTH));
