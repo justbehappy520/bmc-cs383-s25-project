@@ -1,0 +1,17 @@
+toInt: NegNumPool
+toLong: NegNumPool
+toFloat: RandomPool
+toDouble: RandomPool
+toByte: NegNumPool
+toShort: NegNumPool
+createNumber: HexPool
+createFloat: RandomPool
+createDouble: RandomPool
+createInteger: HexPool
+createLong: HexPool
+createBigInteger: HexPool
+createBigDecimal: RandomPool
+min: RandomPool
+max: RandomPool
+isDigits: NegNumPool
+isNumber: HexPool
