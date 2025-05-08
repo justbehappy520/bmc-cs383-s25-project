@@ -1,0 +1,45 @@
+toInt : NegNumPool
+toInt(String, int) : NegNumPool
+toLong : NegNumPool
+toLong(String, long) : NegNumPool
+toFloat : NegNumPool
+toFloat(String, float) : NegNumPool
+toDouble : NegNumPool
+toDouble(String, double) : NegNumPool
+toByte : NegNumPool
+toByte(String, byte) : NegNumPool
+toShort : NegNumPool
+toShort(String, short) : NegNumPool
+createNumber : HexPool
+createFloat : RandomStringPool
+createDouble : RandomStringPool
+createInteger : HexPool
+createLong : HexPool
+createBigInteger : HexPool
+createBigDecimal : NegNumPool
+min(long[]) : RandomStringPool
+min(int[]) : RandomStringPool
+min(short[]) : RandomStringPool
+min(byte[]) : RandomStringPool
+min(double[]) : RandomStringPool
+min(float[]) : RandomStringPool
+max(long[]) : RandomStringPool
+max(int[]) : RandomStringPool
+max(short[]) : RandomStringPool
+max(byte[]) : RandomStringPool
+max(double[]) : RandomStringPool
+max(float[]) : RandomStringPool
+min(long, long, long) : RandomStringPool
+min(int, int, int) : RandomStringPool
+min(short, short, short) : RandomStringPool
+min(byte, byte, byte) : RandomStringPool
+min(double, double, double) : RandomStringPool
+min(float, float, float) : RandomStringPool
+max(long, long, long) : RandomStringPool
+max(int, int, int) : RandomStringPool
+max(short, short, short) : RandomStringPool
+max(byte, byte, byte) : RandomStringPool
+max(double, double, double) : RandomStringPool
+max(float, float, float) : RandomStringPool
+isDigits : UnicodePool
+isNumber : HexPool
